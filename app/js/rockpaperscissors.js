@@ -66,7 +66,26 @@ function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
-    
+    while (playerWins < 5 && computerWins < 5) {
+        if (getWinner("Player")) {
+            playerWins += 1;
+        } else if (getWinner("Computer")) {
+            computerWins += 1;
+        }
+    }
     return [playerWins, computerWins];
 }
 
+function playTo(x) {
+    console.log("Let's play Rock, Paper, Scissors");
+    var playerWins = 0;
+    var computerWins = 0;
+    while (playerWins < x && computerWins < x) {
+        if (getWinner("Player")) {
+            playerWins += 1;
+        } else if (getWinner("Computer")) {
+            computerWins += 1;
+        }
+    }
+    return [playerWins, computerWins];
+}
